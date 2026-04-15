@@ -1,4 +1,3 @@
-using Microsoft.VisualBasic;
 using Task1.Enums;
 
 namespace Task1.Models;
@@ -11,6 +10,6 @@ public class TeacherModel
     public string Specialization { set; get; }
     public string PhoneNumber { set; get; }
     public string Department { set; get; }
-    public DateAndTime HireDate { set; get; }
+    public DateTime HireDate { set; get; }
     public int Salary { set; get; }
 }

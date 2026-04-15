@@ -1,5 +1,4 @@
 using MediatR;
-using Microsoft.VisualBasic;
 using Task1.Enums;
 
 namespace Task1.DTOs.Student
@@ -12,7 +11,7 @@ namespace Task1.DTOs.Student
      string PhoneNumber,
      string? Address,
      string Department,
-     DateAndTime EnrollmentDate
+     DateTime EnrollmentDate
     ) : IRequest<StudentResponse>;
     
     public record StudentResponse(
@@ -23,6 +22,6 @@ namespace Task1.DTOs.Student
      string PhoneNumber,
      string? Address,
      string Department,
-     DateAndTime EnrollmentDate
+     DateTime EnrollmentDate
     );
 }

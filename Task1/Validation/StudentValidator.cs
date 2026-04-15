@@ -14,7 +14,8 @@ namespace Task1.Validation
             RuleFor(s => s.PhoneNumber).NotEmpty().MinimumLength(10).MaximumLength(15);
             RuleFor(s => s.Address).MaximumLength(200);
             RuleFor(s => s.Department).NotEmpty().MaximumLength(100);
-            RuleFor(s => s.EnrollmentDate).NotEmpty(); // find how to validate its not in future
+            RuleFor(s => s.EnrollmentDate).LessThanOrEqualTo(DateTime.UtcNow)
+                .WithMessage("Enrollment date cannot be in the future");
         }
     }
 }
