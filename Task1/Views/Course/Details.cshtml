@@ -1,0 +1,35 @@
+@model Task1.Models.CourseModel
+
+<h2>Course Details</h2>
+
+<dl>
+    <dt>Course Code</dt>
+    <dd>@Model.CourseCode</dd>
+
+    <dt>Course Name</dt>
+    <dd>@Model.CourseName</dd>
+
+    <dt>Description</dt>
+    <dd>@Model.Description</dd>
+
+    <dt>Credits</dt>
+    <dd>@Model.Credits</dd>
+
+    <dt>Department</dt>
+    <dd>@Model.Department</dd>
+
+    <dt>Capacity</dt>
+    <dd>@Model.Capacity</dd>
+
+    <dt>Teacher</dt>
+    <dd>@Model.Teacher?.FullName</dd>
+
+    <dt>Start Date</dt>
+    <dd>@Model.StartDate.ToShortDateString()</dd>
+
+    <dt>End Date</dt>
+    <dd>@Model.EndDate.ToShortDateString()</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a asp-action="Index">Back to List</a>

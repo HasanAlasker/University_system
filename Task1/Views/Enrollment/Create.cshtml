@@ -1,0 +1,67 @@
+@model Task1.Models.EnrollmentModel
+
+<h2>Add New Enrollment</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div style="color:red">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+
+    <div>
+        <label asp-for="StudentId"></label>
+        <select asp-for="StudentId">
+            <option value="">-- Select Student --</option>
+            @foreach (var student in ViewBag.Students)
+            {
+                <option value="@student.Id">@student.FullName</option>
+            }
+        </select>
+        <span asp-validation-for="StudentId"></span>
+    </div>
+
+    <div>
+        <label asp-for="CourseId"></label>
+        <select asp-for="CourseId">
+            <option value="">-- Select Course --</option>
+            @foreach (var course in ViewBag.Courses)
+            {
+                <option value="@course.Id">@course.CourseName</option>
+            }
+        </select>
+        <span asp-validation-for="CourseId"></span>
+    </div>
+
+    <div>
+        <label asp-for="EnrollmentDate"></label>
+        <input asp-for="EnrollmentDate" type="date" />
+        <span asp-validation-for="EnrollmentDate"></span>
+    </div>
+
+    <div>
+        <label asp-for="Status"></label>
+        <select asp-for="Status">
+            <option value="">-- Select Status --</option>
+            <option value="Active">Active</option>
+            <option value="Completed">Completed</option>
+            <option value="Dropped">Dropped</option>
+        </select>
+        <span asp-validation-for="Status"></span>
+    </div>
+
+    <div>
+        <label asp-for="Grade"></label>
+        <input asp-for="Grade" />
+        <span asp-validation-for="Grade"></span>
+    </div>
+
+    <button type="submit">Save</button>
+    <a asp-action="Index">Cancel</a>
+</form>

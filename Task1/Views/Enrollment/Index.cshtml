@@ -1,0 +1,34 @@
+@model IEnumerable<Task1.Models.EnrollmentModel>
+
+<h2>Enrollments</h2>
+<a asp-action="Create">Add New Enrollment</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Enrollment Date</th>
+            <th>Status</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var enrollment in Model)
+        {
+            <tr>
+                <td>@enrollment.Student?.FullName</td>
+                <td>@enrollment.Course?.CourseName</td>
+                <td>@enrollment.EnrollmentDate.ToShortDateString()</td>
+                <td>@enrollment.Status</td>
+                <td>@enrollment.Grade</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@enrollment.Id">Details</a>
+                    <a asp-action="Edit" asp-route-id="@enrollment.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@enrollment.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

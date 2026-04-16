@@ -1,0 +1,23 @@
+@model Task1.Models.EnrollmentModel
+
+<h2>Enrollment Details</h2>
+
+<dl>
+    <dt>Student</dt>
+    <dd>@Model.Student?.FullName</dd>
+
+    <dt>Course</dt>
+    <dd>@Model.Course?.CourseName</dd>
+
+    <dt>Enrollment Date</dt>
+    <dd>@Model.EnrollmentDate.ToShortDateString()</dd>
+
+    <dt>Status</dt>
+    <dd>@Model.Status</dd>
+
+    <dt>Grade</dt>
+    <dd>@Model.Grade</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a asp-action="Index">Back to List</a>
