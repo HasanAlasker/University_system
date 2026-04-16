@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Task1.Enums;
+using Task1.Validation;
 
 namespace Task1.Models;
 
@@ -16,6 +17,7 @@ public class EnrollmentModel
     public string Status { set; get; }
 
     [Required]
+    [NotInFuture]
     public DateTime EnrollmentDate { set; get; }
 
     [Required]

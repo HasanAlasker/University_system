@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Task1.Enums;
+using Task1.Validation;
 
 namespace Task1.Models;
 
@@ -29,10 +30,10 @@ public class TeacherModel
     public string Department { set; get; }
 
     [Required]
-    //must not be in the future
+    [NotInFuture]
     public DateTime HireDate { set; get; }
 
     [Required]
-    [Range(1, int.MaxValue)]
-    public int Salary { set; get; }
+    [Range(1, 9999999.99)]
+    public decimal Salary { set; get; }
 }

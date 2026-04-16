@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Task1.Enums;
+using Task1.Validation;
 
 namespace Task1.Models;
 
@@ -21,7 +22,6 @@ public class StudentModel
     public int Age { set; get; }
 
     [Required]
-    [RegularExpression("Male|Female")]
     public Gender StudentGender { set; get; }
 
     [Required]
@@ -36,5 +36,6 @@ public class StudentModel
     public string Department { set; get; }
 
     [Required]
+    [NotInFuture]
     public DateTime EnrollmentDate { set; get; }
 }
