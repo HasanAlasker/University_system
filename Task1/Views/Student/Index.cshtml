@@ -1,0 +1,32 @@
+@model IEnumerable<Task1.Models.StudentModel>
+
+<h2>Students</h2>
+<a asp-action="Create">Add New Student</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FullName</td>
+                <td>@student.Email</td>
+                <td>@student.Department</td>
+                <td>@student.Age</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@student.Id">Details</a>
+                    <a asp-action="Edit" asp-route-id="@student.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
