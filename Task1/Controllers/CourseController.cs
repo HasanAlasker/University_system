@@ -13,7 +13,7 @@ public class CourseController : Controller
         _context = context;
     }
 
-    // GET: /Course
+    // get Course page and list them
     public async Task<IActionResult> Index()
     {
         // Include() loads the related Teacher so we can show teacher name
@@ -23,7 +23,6 @@ public class CourseController : Controller
         return View(courses);
     }
 
-    // GET: /Course/Details/5
     public async Task<IActionResult> Details(int id)
     {
         var course = await _context.Courses
@@ -33,15 +32,15 @@ public class CourseController : Controller
         return View(course);
     }
 
-    // GET: /Course/Create
+    // get create course page
     public async Task<IActionResult> Create()
     {
-        // Send teachers list to the view for the dropdown
+        // Send teachers to the view for the dropdown list
         ViewBag.Teachers = await _context.Teachers.ToListAsync();
         return View();
     }
 
-    // POST: /Course/Create
+    // POST: create the course
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(CourseModel course)
@@ -57,17 +56,18 @@ public class CourseController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    // GET: /Course/Edit/5
+    // GEt tthe edit page (send initail values)
     public async Task<IActionResult> Edit(int id)
     {
         var course = await _context.Courses.FirstOrDefaultAsync(c => c.Id == id);
         if (course == null) return NotFound();
 
+        // to display other teachers in the ddl
         ViewBag.Teachers = await _context.Teachers.ToListAsync();
         return View(course);
     }
 
-    // POST: /Course/Edit/5
+    // POST: confirm edit
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, CourseModel course)
@@ -84,7 +84,7 @@ public class CourseController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    // GET: /Course/Delete/5
+    // show delete screen 
     public async Task<IActionResult> Delete(int id)
     {
         var course = await _context.Courses
@@ -94,7 +94,7 @@ public class CourseController : Controller
         return View(course);
     }
 
-    // POST: /Course/Delete/5
+    // POST: delete
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int id)

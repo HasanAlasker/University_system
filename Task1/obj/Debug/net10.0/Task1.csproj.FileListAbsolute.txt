@@ -29,7 +29,6 @@ C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\rjsmcshtml.dswa
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\scopedcss\bundle\Task1.styles.css
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\scopedcss\projectbundle\Task1.bundle.scp.css
-C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\compressed\7rfqews7b6-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\compressed\omcahlpzk0-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\compressed\673ffd0ked-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\compressed\xl4b06vz49-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -194,3 +193,4 @@ C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\bin\Debug\net10.0\tr\Microsoft.Co
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\Task1.sourcelink.json
+C:\Users\hasan\OneDrive\Desktop\MVC_task\Task1\obj\Debug\net10.0\compressed\7rfqews7b6-{0}-st28j3jd70-st28j3jd70.gz

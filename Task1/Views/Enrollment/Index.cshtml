@@ -24,9 +24,9 @@
                 <td>@enrollment.Status</td>
                 <td>@enrollment.Grade</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@enrollment.Id">Details</a>
+                    <a asp-action="Details" class="black" asp-route-id="@enrollment.Id">Details</a>
                     <a asp-action="Edit" asp-route-id="@enrollment.Id">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@enrollment.Id">Delete</a>
+                    <a asp-action="Delete" class="red" asp-route-id="@enrollment.Id">Delete</a>
                 </td>
             </tr>
         }
